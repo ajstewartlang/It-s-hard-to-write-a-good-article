@@ -1,7 +1,7 @@
 #install the lme4, lsmeans and lmertest packages first
-install.packages ("lme4")
-install.packages ("lmerTest") 
-install.packages ("lsmeans")
+#install.packages ("lme4")
+#install.packages ("lmerTest") 
+#install.packages ("lsmeans")
 library (lme4)
 library (lmerTest)
 library(lsmeans) 

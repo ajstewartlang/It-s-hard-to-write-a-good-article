@@ -2,8 +2,8 @@
 #install.packages ("lme4")
 #install.packages ("lmerTest") 
 #install.packages ("lsmeans")
-library (lme4)
-library (lmerTest)
+library(lme4)
+library(lmerTest)
 library(lsmeans) 
 
 #Example item
@@ -30,9 +30,9 @@ library(lsmeans)
 
 #Analyze first pass reading times
 #Read in First Pass Data
-fpfp0 <- read.csv("~/fpfp0.ixs")
+fpfp0 <- read.csv("fpfp0.ixs")
 
-fpfp0$cond <- as.factor (fpfp0$cond)
+fpfp0$cond <- as.factor(fpfp0$cond)
 
 #Critical Region Analysis
 index <- fpfp0$DV > 0 & fpfp0$reg == "R3"                                            # this removes invalid trials and only select region 3 data.
@@ -51,9 +51,9 @@ summary (model.full)
 
 #Analyze Regression Path Times
 #Read in Regression Path Data
-GPgp1 <- read.csv("~/GPgp1.ixs")
+GPgp1 <- read.csv("GPgp1.ixs")
 
-GPgp1$cond <- as.factor (GPgp1$cond)
+GPgp1$cond <- as.factor(GPgp1$cond)
 
 #Critical Region Analysis
 index <- GPgp1$DV > 0 & GPgp1$reg == "R3"                                            # this removes invalid trials and only select region 3 data.
@@ -73,9 +73,9 @@ summary (model.full)
 
 #Analyze Total Reading Times
 #Read in Total Time Data
-TTtt0 <- read.csv("~/TTtt0.ixs")
+TTtt0 <- read.csv("TTtt0.ixs")
 
-TTtt0$cond <- as.factor (TTtt0$cond)
+TTtt0$cond <- as.factor(TTtt0$cond)
 
 #Critical Region Analysis
 index <- TTtt0$DV > 0 & TTtt0$reg == "R3"                                            # this removes invalid trials and only select region 3 data.
@@ -95,9 +95,9 @@ summary (model.full)
 
 #Analyze the Regressions Out data 
 #Read in FPRO Data
-FPRO <- read.delim("~/FPRO_correct.ixs")
+FPRO <- read.delim("FPRO_correct.ixs")
 
-FPRO$cond <- as.factor (FPRO$cond)
+FPRO$cond <- as.factor(FPRO$cond)
 
 #full random effects models do not convergre so run separate F1 and F2 models
 #F1 model names are by-participants, F2 by-items
